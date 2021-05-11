@@ -1,0 +1,36 @@
+type Book {
+    authors: [String!]
+    cacheId :ID
+    id: ID
+    name: String!
+}
+
+type Persona {
+    nombre:String!
+    apellido: String!
+    edad: Float!
+}
+
+input PersonaInput{
+    nombre:String!
+    apellido: String!
+    edad: Float!
+}
+
+
+input BookInput {
+    authors: [String!]
+    cacheId :ID
+    id: ID
+    name: String!
+}
+
+type Query {
+    books: [Book] @cacheControl(scope: PUBLIC, maxAge: SHORT)
+    personas(from: Int = 0, to: Int = 4): [Persona]
+}
+
+type Mutation {
+    newBook(book: BookInput!): Book
+    newPersona(persona: PersonaInput!): Persona
+}

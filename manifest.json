@@ -1,0 +1,27 @@
+{
+  "name": "graphql-example",
+  "vendor": "vtex",
+  "version": "0.0.0",
+  "title": "Graphql",
+  "description": "",
+  "builders": {
+    "graphql": "1.x",
+    "node": "6.x"
+  },
+  "script": {
+    "prereleasy": "bash lint.sh"
+  },
+  "credentialType": "absolute",
+  "policies": [
+    {
+      "name": "colossus-fire-event"
+    },
+    {
+      "name": "colossus-write-logs"
+    },
+    {
+      "name": "graphql-query"
+    }
+  ],
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

@@ -11,6 +11,7 @@ type Persona {
     edad: Float!
 }
 
+
 input PersonaInput{
     nombre:String!
     apellido: String!
@@ -25,9 +26,16 @@ input BookInput {
     name: String!
 }
 
+type Pais {
+    name:String!
+    code: String!
+    states: String!
+}
+
 type Query {
     books: [Book] @cacheControl(scope: PUBLIC, maxAge: SHORT)
     personas(from: Int = 0, to: Int = 4): [Persona]
+    paises:[Pais]
 }
 
 type Mutation {

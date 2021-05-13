@@ -1,4 +1,4 @@
-import { ExternalClient, IOContext, InstanceOptions } from '@vtex/Api';
+import { ExternalClient, IOContext, InstanceOptions } from '@vtex/api';
 import {Persona, PersonaInput} from '../../typings/custom';
 
 export class PersonaClient extends ExternalClient{

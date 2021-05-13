@@ -24,3 +24,9 @@ export interface PersonaInput {
     apellido:Persona['apellido']
     edad: Persona['edad']
 }
+
+export interface Pais {
+    name:String
+    code:String
+    states:String
+}

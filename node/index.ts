@@ -4,6 +4,9 @@ import { Clients} from './clients';
 
 import { newBook} from './resolvers/newBook';
 import { books } from './resolvers/books';
+import {newPersona } from './resolvers/newPersona';
+import { personas } from './resolvers/persona';
+import { paises } from './resolvers/pais';
 
 declare global {
     type Context = ServiceContext<Clients>
@@ -23,11 +26,16 @@ export default new Service({
     graphql:{
         resolvers:{
             Mutation: {
-                newBook
+                newBook,
+                newPersona
 
             },
             Query:{
-                books
+                books,
+                personas,
+                paises
+
+                
             }
         }
     }

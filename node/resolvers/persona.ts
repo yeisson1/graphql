@@ -1,12 +1,10 @@
 
-
-
 interface Arg {
     from:number
     to:number
 }
 
-export const persona = (
+export const personas = (
     _:any,
     arg:Arg,
     {
